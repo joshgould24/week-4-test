@@ -22,7 +22,8 @@ public class Philosopher extends Thread {
 	protected void think() {
 		System.out.println("Philosopher " + identifier + " is thinking about morals or something...");
 		try {
-			sleep(new Random().nextInt(850) + 150);    //[0...84] + 15 = [15...99]
+			//sleep(new Random().nextInt(850) + 150);    //[0...84] + 15 = [15...99]
+			sleep(500);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -34,7 +35,8 @@ public class Philosopher extends Thread {
 		if(hasLeftChopstick && hasRightChopstick) {
 			System.out.println("Philosopher " + identifier + " started eating...");
 			try {
-				sleep(new Random().nextInt(850) + 150);    //[0...84] + 15 = [15...99]
+				//sleep(new Random().nextInt(850) + 150);    //[0...84] + 15 = [15...99]
+				sleep(500);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

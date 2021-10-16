@@ -20,10 +20,22 @@ public class Driver {
 		PhilosopherB B = new PhilosopherB(chopstick1, chopstick2, "B");
 		PhilosopherC C = new PhilosopherC(chopstick2, chopstick3, "C");
 		
+		System.out.println("Dinner is served!");
+		
 		A.start();
 		B.start();
 		C.start();
 
+		try {
+			A.join();
+			B.join();
+			C.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		System.out.println("All Philosophers are finished eating.");
 	}
 
 }
