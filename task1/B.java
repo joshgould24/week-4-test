@@ -23,6 +23,7 @@ public class B extends Thread {
 			S.acquire();
 			System.out.println("B - Acquired Resource S");
 			//hold and wait - this process has been allowed to hold resource R while waiting to acquire resource S.
+			//There is also no way to forcibly take away access to resource R.
 			
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
